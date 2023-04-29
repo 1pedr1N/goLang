@@ -11,14 +11,23 @@ money float64
 
 func main(){
 
-	var peterAccount = CurrentAccount{
+	peterAccount := CurrentAccount{
 
 		owner: "Pedro",
 		agencyNumber:1232,
 		accountNumber: 2323,
 		money:200.50,
 	}
-	var agnesAccount = CurrentAccount{
+	peterAccount2 := CurrentAccount{
+
+		owner: "Pedro",
+		agencyNumber:1232,
+		accountNumber: 2323,
+		money:200.50,
+	}
+
+	fmt.Println(peterAccount == peterAccount2)
+ /*	var agnesAccount = CurrentAccount{
 
 		owner: "Agnes",
 		agencyNumber:232,
@@ -27,14 +36,14 @@ func main(){
 	}
 
     fmt.Println(agnesAccount)
-	fmt.Println(peterAccount)
+
 
 	var crisAccount * CurrentAccount
 	crisAccount = new(CurrentAccount)
 	crisAccount.owner = "Cris"
 	crisAccount.money = 1983.50
 
-	fmt.Println(crisAccount)
+	fmt.Println(crisAccount) */
 
 
 	
