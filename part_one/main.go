@@ -8,43 +8,27 @@ accountNumber int
 money float64
 }
 
+func (c *CurrentAccount) RetiredMoney(retiredValue float64) string {
+	canRetired := retiredValue <= c.money
+	if canRetired {
+		c.money -= retiredValue
+		return "Saque realizado com sucesso"
+	} else {
+		return "Dinheiro insuficiente"
+	}
+
+}
 
 func main(){
 
-	peterAccount := CurrentAccount{
+silviaAccount := CurrentAccount{}
+silviaAccount.owner = "Silvia"
 
-		owner: "Pedro",
-		agencyNumber:1232,
-		accountNumber: 2323,
-		money:200.50,
-	}
-	peterAccount2 := CurrentAccount{
-
-		owner: "Pedro",
-		agencyNumber:1232,
-		accountNumber: 2323,
-		money:200.50,
-	}
-
-	fmt.Println(peterAccount == peterAccount2)
- /*	var agnesAccount = CurrentAccount{
-
-		owner: "Agnes",
-		agencyNumber:232,
-		accountNumber: 1211,
-		money:1000.50,
-	}
-
-    fmt.Println(agnesAccount)
-
-
-	var crisAccount * CurrentAccount
-	crisAccount = new(CurrentAccount)
-	crisAccount.owner = "Cris"
-	crisAccount.money = 1983.50
-
-	fmt.Println(crisAccount) */
-
-
-	
+silviaAccount.money = 900.50
+fmt.Println(silviaAccount.money)
+/*
+retireMoney := 200.00
+silviaAccount.money = silviaAccount.money - retireMoney */
+fmt.Println(silviaAccount.RetiredMoney(200.00))
+fmt.Println(silviaAccount.money)
 }
