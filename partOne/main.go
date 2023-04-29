@@ -1,7 +1,7 @@
 package main;
 import (
 	"fmt";
-	"partOne\accounts";
+	"partOne/accounts";
 )
 
 
